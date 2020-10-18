@@ -8,6 +8,8 @@ import { Reflection } from './Reflection';
 import { Breathing } from './Breathing';
 import { Exercises } from './Exercises';
 import { MathGame } from './MathGame';
+import { Reminder } from './Reminder';
+import { BrainDump } from './BrainDump';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path='/breathing' component={Breathing}/>
         <Route path='/exercises' component={Exercises}/>
         <Route path='/MathGame' component={MathGame}/>
+        <Route path='/Reminder' component={Reminder}/>
+        <Route path='/BrainDump' component={BrainDump}/>
         {/* make a route for homepage */}
       </Switch>
     </BrowserRouter>
