@@ -7,7 +7,7 @@ export const NavBar = () => {
       <nav className="nav-bar">
         <Link className="title" to='#'>ADHD Playback Tool</Link>
         <Link to='/home'>Home</Link>
-        <Link to='/video'>Video</Link>
+        <Link to='/more'>More Information</Link>
       </nav>
     );
 }
