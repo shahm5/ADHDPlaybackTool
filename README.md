@@ -8,7 +8,7 @@ We built this utilizing React, JavaScript, HTML, and CSS
 ## Challenges we ran into
 Something which was challenging for us was figuring out how to integrate the YouTube iframe API, which we were planning to use to automatically pause and play our video during the designated breaks.
 ## Accomplishments that we're proud of
-We are proud of having functioning prototype to show present our idea of making online learning easier.
+We are proud of having functioning prototype to present our idea of making online learning easier.
 ## What we learned
 The majority of our team was completely unfamiliar with frontend development tools, as well as version control. Now, we have a working knowledge of the languages listed above, as well as git. 
 ## What's next for ADHD Playback Tool
