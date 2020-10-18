@@ -3,6 +3,7 @@ import './styles/App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 // import { MoreInformation } from './MoreInformation';
 import { HomePage } from './HomePage';
+import {Video} from './Video';
 import { Pause } from './Pause';
 import { Reflection } from './Reflection';
 import { Breathing } from './Breathing';
@@ -11,6 +12,8 @@ import { MathGame } from './MathGame';
 import { Reminder } from './Reminder';
 import { BrainDump } from './BrainDump';
 import {ProgressBar} from './ProgressBar';
+import {MoreInformation} from './MoreInformation';
+import {NavBar} from './NavBar';
 
 function App() {
   return (
@@ -29,6 +32,8 @@ function App() {
         {/* make a route for homepage */}
         {/* <Route path='/more' exact component={MoreInformation}/> */}
         <Route path='/progress' exact component={ProgressBar}/>
+        <Route path='/more' exact component={MoreInformation}/>
+        <Route path='/NavBar' exact component={NavBar}/>
       </Switch>
     </BrowserRouter>
   );

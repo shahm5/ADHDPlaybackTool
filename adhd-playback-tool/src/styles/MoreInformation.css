@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    background-color: rgb(26, 75, 77);
+    color: rgb(43, 169, 173);
+}
+p{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: x-large;
+    color: rgb(43, 169, 173);
+}
