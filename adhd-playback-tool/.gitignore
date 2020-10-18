@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
+adhd-playback-tool\package-lock.json
 
 # testing
 /coverage

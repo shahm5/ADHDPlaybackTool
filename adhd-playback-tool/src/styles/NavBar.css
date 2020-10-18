@@ -1,0 +1,24 @@
+.nav-bar {
+  width: 100%;
+  background-color: rgb(26, 75, 77);
+}
+
+.nav-bar a {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: rgb(26, 75, 77);
+  padding: 2%;
+  color: rgb(43, 169, 173);
+  display: inline-block;
+}
+
+.nav-bar a.title {
+  cursor: default;
+  font-weight: bold;
+}
+
+.nav-bar a:not(.title):hover {
+  background-color:rgb(43, 169, 173);
+  color:rgb(26, 75, 77);
+}
