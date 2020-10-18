@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles/App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import { Video } from './Video';
+// import { MoreInformation } from './MoreInformation';
 import { HomePage } from './HomePage';
+import {ProgressBar} from './ProgressBar';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Switch>
         <Route path='/' exact componenent={HomePage}/>
         <Route path='/home' exact component={HomePage}/>
-        <Route path='/video' exact component={Video}/>
+        {/* <Route path='/more' exact component={MoreInformation}/> */}
+        <Route path='/progress' exact component={ProgressBar}/>
       </Switch>
     </BrowserRouter>
   );

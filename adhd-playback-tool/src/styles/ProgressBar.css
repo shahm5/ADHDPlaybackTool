@@ -1,0 +1,13 @@
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  border-radius: 50px;
+  border: 2px solid rgb(26, 75, 77);
+  /* background-image: repeating-linear-gradient(90deg, transparent, transparent 9.5%,rgb(26, 75, 77) 9.5%,  rgb(26, 75, 77) 10%); */
+}
+
+.progress-bar .curr-progress {
+  height: inherit;
+  border-radius: inherit;
+  background-color: rgb(26, 75, 77);
+}
