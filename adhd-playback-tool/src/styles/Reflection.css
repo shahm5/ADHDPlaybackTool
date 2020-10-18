@@ -1,9 +1,9 @@
-h1 {
+.reflection h1 {
     text-align: center;
     background-color: rgb(26, 75, 77);
     color: rgb(43, 169, 173);
 }
-form{
+.reflection form{
     margin-top: 200px;
     margin-left: 450px;
 }

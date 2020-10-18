@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavBar } from './NavBar';
 import './styles/MoreInformation.css';
 
 export const MoreInformation = () => {
     return (
-        <div>
+        <div className="more">
+            <NavBar/>
             <h1>More Information</h1>
              <p>
              As COVID-19 infection rates are increasing globally, most schools have transitioned to online learning. Millions of students have to attend live online classes or watch pre-recorded lectures for several hours a day. As noninteractive as online schooling is, it is even more difficult for those with ADHD.<br/>

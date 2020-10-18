@@ -3,7 +3,7 @@ import './styles/Reflection.css';
 
 export const Reflection = () => {
     return (
-        <div>
+        <div className="reflection">
             <h1>Take a few minutes to reflect on what has been taught so far</h1>
             <form action="//www.html.am/html-codes/textboxes/submitted.cfm">
                 <textarea name="myTextBox" cols="50" rows="5">

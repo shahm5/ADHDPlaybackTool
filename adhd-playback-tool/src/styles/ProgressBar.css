@@ -3,11 +3,22 @@
   height: 30px;
   border-radius: 50px;
   border: 2px solid rgb(26, 75, 77);
-  /* background-image: repeating-linear-gradient(90deg, transparent, transparent 9.5%,rgb(26, 75, 77) 9.5%,  rgb(26, 75, 77) 10%); */
 }
 
 .progress-bar .curr-progress {
   height: inherit;
   border-radius: inherit;
+}
+
+.progress-bar .transition {
   background-color: rgb(26, 75, 77);
+
+  animation: load 75s linear 0s;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+
+@keyframes load {
+  from { width: 0%; }
+  to   { width: 100%; }
 }

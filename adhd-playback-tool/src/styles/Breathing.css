@@ -1,14 +1,14 @@
-h1 {
+.breathe h1 {
     text-align: center;
     background-color: rgb(26, 75, 77);
     color: rgb(43, 169, 173);
 }
-p{
+.breathe p{
     text-align: center;
     margin-top: 200px;
     font-size: xx-large;
     color: rgb(43, 169, 173);
 }
-button{
+..breathe button{
     margin-left: 600px;
 }

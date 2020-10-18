@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { NavBar } from "./NavBar";
+import { Pause } from "./Pause";
+import { ProgressBar } from "./ProgressBar";
 import "./styles/Video.css";
 
 // export const Video = () => {
@@ -50,9 +53,11 @@ class Video extends React.Component {
     this.state = {
       url: "",
       urlInput: "",
-      pauseInterval: 15,
+      pauseInterval: 15000,
       player: null,
       show: false,
+      bar:  false,
+      index: -1,
     };
   }
 
@@ -80,6 +85,7 @@ class Video extends React.Component {
     // the Player object is created uniquely based on the id in props
     // let x = new String(id);
     console.log("player created");
+    this.setState({bar: true});
     let play = new window.YT.Player("ytplayer", {
       events: {
         // 'onReady': this.onPlayerReady
@@ -88,8 +94,9 @@ class Video extends React.Component {
     });
     this.setState({ player: play });
     setInterval(() => {
-        this.showModal();
-    }, 15000)
+      this.showModal();
+      this.setState({index: this.state.index + 1});
+    }, this.state.pauseInterval);
   };
 
   updateInput = (e) => {
@@ -155,36 +162,40 @@ class Video extends React.Component {
 
   render = () => {
     return (
-      <div className="videoComp">
-        <input onChange={this.updateInput} value={this.state.urlInput} />
-        <button onClick={this.getVideo}>Get my video!</button>
-        {/* <button onClick={this.pause}>PAUSE</button> */}
-        {!this.state.show ? (
-          <div />
-        ) : (
-          <div id="myModal" className="modal-display">
-            <div class="modal-content">
-              <button onClick={this.hideModal}>X</button>
-              <p>Some text in the Modal..</p>
+      <div>
+        <NavBar />
+        <div className="videoComp">
+          <input onChange={this.updateInput} value={this.state.urlInput} />
+          <button style={{margin: 4}} onClick={this.getVideo}>Get my video!</button>
+          {/* <button onClick={this.pause}>PAUSE</button> */}
+          <ProgressBar active={this.state.bar}/>
+          {!this.state.show ? (
+            <div />
+          ) : (
+            <div id="myModal" className="modal-display">
+              <div class="modal-content">
+                <button onClick={this.hideModal}>X</button>
+                <Pause index={this.state.index}/>
+              </div>
             </div>
-          </div>
-        )}
-        {this.state.url === "" ? (
-          <div />
-        ) : (
-          <div>
-            <iframe
-              width="900"
-              height="506"
-              id="ytplayer"
-              src={this.state.url}
-              frameBorder="0"
-              allowFullScreen
-              className="video"
-            ></iframe>
-            {/* <div id="ytplayer"></div> */}
-          </div>
-        )}
+          )}
+          {this.state.url === "" ? (
+            <div />
+          ) : (
+            <div>
+              <iframe
+                width="900"
+                height="506"
+                id="ytplayer"
+                src={this.state.url}
+                frameBorder="0"
+                allowFullScreen
+                className="video"
+              ></iframe>
+              {/* <div id="ytplayer"></div> */}
+            </div>
+          )}
+        </div>
       </div>
     );
   };

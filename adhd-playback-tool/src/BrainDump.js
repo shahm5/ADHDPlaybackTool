@@ -3,7 +3,7 @@ import './styles/BrainDump.css';
 
 export const BrainDump = () => {
     return (
-        <div>
+        <div className="brain">
             <h1>Take a few minutes to Brain Dump!</h1>
             <form action="//www.html.am/html-codes/textboxes/submitted.cfm">
                 <textarea name="myTextBox" cols="50" rows="5">
