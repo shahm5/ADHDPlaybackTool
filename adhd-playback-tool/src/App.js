@@ -7,6 +7,7 @@ import { Pause } from './Pause';
 import { Reflection } from './Reflection';
 import { Breathing } from './Breathing';
 import { Exercises } from './Exercises';
+import { MathGame } from './MathGame';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/reflection' component={Reflection}/>
         <Route path='/breathing' component={Breathing}/>
         <Route path='/exercises' component={Exercises}/>
+        <Route path='/MathGame' component={MathGame}/>
         {/* make a route for homepage */}
       </Switch>
     </BrowserRouter>
