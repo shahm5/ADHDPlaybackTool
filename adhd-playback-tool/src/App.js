@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import { Video } from './Video';
+// import { MoreInformation } from './MoreInformation';
 import { HomePage } from './HomePage';
 import { Pause } from './Pause';
 import { Reflection } from './Reflection';
@@ -10,6 +10,7 @@ import { Exercises } from './Exercises';
 import { MathGame } from './MathGame';
 import { Reminder } from './Reminder';
 import { BrainDump } from './BrainDump';
+import {ProgressBar} from './ProgressBar';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path='/Reminder' component={Reminder}/>
         <Route path='/BrainDump' component={BrainDump}/>
         {/* make a route for homepage */}
+        {/* <Route path='/more' exact component={MoreInformation}/> */}
+        <Route path='/progress' exact component={ProgressBar}/>
       </Switch>
     </BrowserRouter>
   );
